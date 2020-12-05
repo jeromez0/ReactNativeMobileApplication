@@ -1,45 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput,TouchableOpacity} from 'react-native';
 
 export function SignupScreen() {
   return (
     <View style={styles.container}>
 
-
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-          width: 200,
-          borderRadius: 25,
-        }}/>
+      <Text>First name</Text>
+      <TextInput style = {styles.inputForm}/>
         
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-          width: 200,
-          marginTop: 25,
-          borderRadius: 25,
-        }}/>
+      <TextInput style = {styles.inputForm}/>
 
-        <TouchableOpacity
-        style = {{
-          height: 30,
-          marginTop: 25,
-          width: 200,
-          backgroundColor: 'teal',
-          borderRadius: 25,
-        }}>
-          <Text
-          style = {{
-            color: 'white',
-            alignSelf: 'center',
-          }}>Register</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style = {styles.registerButton}>
+          <Text style = {{color: 'white',alignSelf: 'center',marginTop: 5}}>
+            Register
+          </Text>
+      </TouchableOpacity>
 
       <StatusBar style="auto" />
     </View>
@@ -53,6 +29,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  inputForm: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    width: 200,
+    marginTop: 20,
+    borderRadius: 20,
+  },
+  registerButton: {
+    height: 40,
+    marginTop: 25,
+    width: 200,
+    backgroundColor: 'teal',
+    borderRadius: 25,
+  },
+
 });
 
 export default SignupScreen;

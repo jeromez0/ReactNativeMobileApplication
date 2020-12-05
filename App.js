@@ -2,15 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'react-native';
 import { LoginScreen } from './src/LoginScreen';
+import { SignupScreen } from './src/SignupScreen';
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      
+      <StatusBar stle = "auto"/>
 
-      <LoginScreen/>
+      {/* <LoginScreen/> */}
+      <SignupScreen></SignupScreen>
 
     </View>
 

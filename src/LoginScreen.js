@@ -5,61 +5,23 @@ import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity} from 'reac
 export function LoginScreen() {
   return (
     <View style={styles.container}>
-
-
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-          width: 200,
-          borderRadius: 10,
-        }}/>
-        
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-          width: 200,
-          marginTop: 25,
-          borderRadius: 10,
-        }}/>
-
-        <TouchableOpacity
-        style = {{
-          height: 30,
-          marginTop: 25,
-          width: 200,
-          backgroundColor: 'teal',
-          borderRadius: 10,
-        }}>
-          <Text
-          style = {{
-            color: 'white',
-            alignSelf: 'center',
-          }}>Login</Text>
-        </TouchableOpacity>
-      
-        <TouchableOpacity
-        style = {{
-          height: 30,
-          marginTop: 25,
-          width: 200,
-          backgroundColor: 'orange',
-          borderRadius: 10,
-        }}>
-          <Text
-          style = {{
-            color: 'white',
-            alignSelf: 'center',
-          }}>Sign Up</Text>
-        </TouchableOpacity>
-        
       <StatusBar style="auto" />
+
+      <Text>Username</Text>
+      <TextInput style = {styles.usernameInput}/>
+
+      <Text>Password</Text>
+      <TextInput style = {styles.usernameInput}/>
+
+      <TouchableOpacity style = {styles.loginButton}>
+        <Text style = {{color: 'white', marginTop: 5}}>Login</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style = {styles.signUpButton}>
+        <Text style = {{color: 'white', marginTop: 5}}>Sign Up</Text>
+      </TouchableOpacity>
+
     </View>
-
-
   );
 }
 
@@ -70,17 +32,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-//   LoginButton:{
-
-//   }
-
-//   SignUpButton:{
-
-
-//   }
-
-
+  usernameInput: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    width: 200,
+    borderRadius: 10,
+  },
+  loginButton: {
+    height: 40,
+    width: 200,
+    backgroundColor: 'teal',
+    borderWidth: 2,
+    marginTop: 20,
+    marginBottom: 20,
+    alignItems: 'center',
+    borderRadius: 20,
+    borderColor: 'grey',
+  },
+  signUpButton: {
+    height: 40,
+    width: 200,
+    backgroundColor: 'skyblue',
+    borderWidth: 2,
+    marginBottom: 20,
+    alignItems: 'center',
+    borderRadius: 20,
+    borderColor: 'grey',
+  }
 });
 
 
